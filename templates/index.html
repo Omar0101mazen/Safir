@@ -1,0 +1,55 @@
+{% load static %}
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logos">
+            {% comment %} <img src="{% static 'images/logo2.png' %}" alt="logo-1"> {% endcomment %}
+            <img src="{% static 'images/logo1.png' %}" alt="logo-2">
+        </div>
+        <h1 class="main-title">
+            شريك زينيك - سفير - صناعة مستقبلك المالي
+        </h1>
+        <hr>
+        <p class="description">
+            انضم إلى مجتمع سفراء العرب
+            <br>
+            تواصل معنا من خلال الواتساب وارسل اسمك واسم المستخدم الذي سجلت فيه في شركة سفير
+        </p>
+        
+        <div class="buttons-area">
+            
+            <form  method="POST" action=''>{% csrf_token %} 
+                <input type="submit" value="التسجيل في سفير" class="sign-up">
+                {{count_of_client.count}}
+            </form>
+            
+            <a href="#" class="whatsapp-contact"><img src="{% static 'images/whatsapp.png' %}" alt="whatsapp-icon">مجتمع سفراء العرب</a>
+        </div>
+        <div class="video-area">
+            <div class="video-content">
+                <iframe   src="{{vedio}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="list-content">
+                <ul>
+                    <li>قيادة - تنظيم</li>
+                    <li>خطط تسويقية</li>
+                    <li>أدوات مساعدة للتسويق</li>
+                    <li>حوافز ومكافآت</li>
+                    <li>تدريب</li>
+                    <li>دعم فني</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

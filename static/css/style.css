@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+/* CSS General Rules */
+:root {
+  --main-color: #9d43fd;
+  --white: #fff;
+  --border-radius: 8px;
+}
+
+* {
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  transition: width none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+body {
+  background: url("../images/background.jpg");
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+/* Container */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 991px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+.logos {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logos img {
+  margin: 0 15px;
+}
+h1.main-title {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+}
+hr {
+  width: 60%;
+  margin: 30px auto;
+  height: 1px;
+  background-color: white;
+}
+p.description {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.6rem;
+  color: white;
+}
+.buttons-area {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons-area a,
+.buttons-area input {
+  cursor: pointer;
+  margin: 0 10px;
+}
+.buttons-area a:hover,
+.buttons-area input:hover {
+  transform: scale(1.05);
+}
+.buttons-area input.sign-up {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #9d43fd;
+  border-radius: 25px;
+  padding: 7px 53px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.buttons-area a.whatsapp-contact {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  background-color: #29a71a;
+  border-radius: 25px;
+  padding: 7px 30px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.buttons-area a.whatsapp-contact img {
+  margin: 0 5px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.video-area {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.video-area div {
+  width: 48%;
+}
+.video-area iframe {
+  border-radius: 5px;
+  width: 100%;
+  height: 300px;
+}
+.video-area .list-content {
+  display: flex;
+  justify-content: center;
+}
+.video-area .list-content ul {
+  list-style: " - ";
+}
+.video-area .list-content ul li {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+/* Responsive */
+@media (max-width: 991px) {
+  .logos img {
+    width: 125px;
+  }
+  h1.main-title {
+    font-size: 3rem;
+  }
+  p.description {
+    font-size: 1.6rem;
+  }
+  .buttons-area input.sign-up,
+  .buttons-area a.whatsapp-contact {
+    font-size: 1.4rem;
+  }
+  .video-area {
+    flex-direction: column;
+  }
+  .video-area div {
+    width: 100% !important;
+  }
+  .video-area .list-content {
+    justify-content: flex-start;
+  }
+  .buttons-area {
+    align-items: normal;
+    flex-direction: column;
+  }
+  .buttons-area a,
+  .buttons-area input {
+    margin-bottom: 10px;
+  }
+  .video-area .list-content ul li {
+    font-size: 2rem;
+  }
+}
